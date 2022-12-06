@@ -73,17 +73,11 @@ func isFullyContain(aStart int, aEnd int, bStart int, bEnd int) bool {
 		outStart, outEnd, inStart, inEnd = aStart, aEnd, bStart, bEnd
 	}
 
-	if outStart <= inStart && outEnd >= inEnd {
-		return true
-	}
-	return false
+	return outStart <= inStart && outEnd >= inEnd
 }
 
 func hasOverlap(aStart int, aEnd int, bStart int, bEnd int) bool {
-	if (aStart < bStart && aEnd < bStart) || (bStart < aStart && bEnd < aStart) {
-		return false
-	}
-	return true
+	return aStart <= bEnd && bStart <= aEnd
 }
 
 func getInput() []string {
