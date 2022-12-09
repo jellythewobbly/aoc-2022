@@ -123,9 +123,6 @@ func isWithin1Cell(headX *int, headY *int, tailX *int, tailY *int) bool {
 	return int(math.Abs(float64(*headX-*tailX))) <= 1 && int(math.Abs(float64(*headY-*tailY))) <= 1
 }
 
-// func part2(input *[]string) int {
-// }
-
 func getInput() []string {
 	fileReader, err := os.Open("./input")
 	if err != nil {
